@@ -34,7 +34,7 @@ plt.ylabel("Number of Pokémon")
 # Plotting pokémon sprites
 for i, (height, origin_name) in enumerate(zip(df.y, df.x)):
     for j, pokemon_name in enumerate(origins[origin_name]):
-        image = mpimg.imread("images/" + pokemon_name + ".png")
+        image = mpimg.imread("icons/" + pokemon_name + ".png")
         plt.imshow(image, extent=[i - 0.5, i + 0.5, j, j + 1])
 
 plt.show()
