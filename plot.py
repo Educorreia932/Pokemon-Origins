@@ -1,5 +1,6 @@
 import csv
 import matplotlib.pyplot as plt
+import pandas as pd
 
 origins = {}
 
@@ -19,11 +20,14 @@ with open('data.csv', newline='') as csvfile:
 # Graph plotting
 
 origin_name = list(origins)
-number_of_pokemon = list(len(origin) for origin in origins)
+number_of_pokemon = list(len(origin) for origin in origins.values())
 
-plt.bar(origin_name, number_of_pokemon)
+df = pd.DataFrame({"x": origin_name, "y": number_of_pokemon})
+df = df.sort_values("y")
+
 plt.xticks(rotation = "vertical")
-plt.ylabel("Number of pokémon")
-plt.title("Pokémon Origins")
+plt.ylabel("Number of Pokémon")
+
+plt.bar(df.x, df.y)
 
 plt.show()
