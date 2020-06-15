@@ -6,7 +6,7 @@ It certainly isn't the most accurate (since it's hard to categorize some pokémo
 
 ## Data
 
-Classification data is saved in a [Google Sheets](https://docs.google.com/spreadsheets/d/196M6nG9C7Ge7w3DcWK7KlOum3fIIgEGiwbLS1XDphYk/edit) sheet that is retrieved as `data.csv` for the Python script to parse and plot.
+Classification data is saved in a Google Sheets [sheet](https://docs.google.com/spreadsheets/d/196M6nG9C7Ge7w3DcWK7KlOum3fIIgEGiwbLS1XDphYk/edit) that is retrieved as a [.csv file](data.csv) for the [Python script](plot.py) to parse and plot.
 
 Pokémon sprites are retrieved from [Pokémon DB](https://pokemondb.net/sprites) using a [web scrapper](retrieve_icons.py).
 

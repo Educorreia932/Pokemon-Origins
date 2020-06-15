@@ -32,7 +32,7 @@ plt.xticks(np.arange(len(df.x)), df.x, rotation = "vertical")
 plt.ylabel("Number of Pokémon")
 
 # Plotting pokémon sprites
-for i, (height, origin_name) in enumerate(zip(df.y, df.x)):
+for i, origin_name in enumerate(df.x):
     for j, pokemon_name in enumerate(origins[origin_name]):
         image = mpimg.imread("icons/" + pokemon_name + ".png")
         plt.imshow(image, extent=[i - 0.5, i + 0.5, j, j + 1])
